@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -18,7 +18,19 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {
+        path: 'add',
+        component: AddComponent
+      },
+      {
+        path: 'list',
+        component: ListComponent
+      }
+    ])
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
