@@ -20,3 +20,13 @@
   </div>
 
 </form>
+<div class="container">
+  <table class="table">
+    <tbody *ngFor="let d of data">
+      <tr>
+        <td>{{d.name}} --> {{d.message}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
